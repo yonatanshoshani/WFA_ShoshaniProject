@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68F9C508-B02B-4587-BE2F-958236AB9C95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WFA_ShoshaniProject</RootNamespace>
+    <AssemblyName>WFA_ShoshaniProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CategoryAccessories.cs" />
+    <Compile Include="BL\Category.cs" />
+    <Compile Include="BL\CategoryAccessoriesArr.cs" />
+    <Compile Include="BL\CategoryArr.cs" />
+    <Compile Include="BL\City.cs" />
+    <Compile Include="BL\CityArr.cs" />
+    <Compile Include="BL\Client.cs" />
+    <Compile Include="BL\ClientArr.cs" />
+    <Compile Include="BL\CompanyAccessories.cs" />
+    <Compile Include="BL\Company.cs" />
+    <Compile Include="BL\CompanyAccessoriesArr.cs" />
+    <Compile Include="BL\CompanyArr.cs" />
+    <Compile Include="BL\Order.cs" />
+    <Compile Include="BL\OrderArr.cs" />
+    <Compile Include="BL\OrderAccessories.cs" />
+    <Compile Include="BL\OrderProduct.cs" />
+    <Compile Include="BL\OrderAccessoriesArr.cs" />
+    <Compile Include="BL\OrderProductArr.cs" />
+    <Compile Include="BL\Accessories.cs" />
+    <Compile Include="BL\Product.cs" />
+    <Compile Include="BL\AccessoriesArr.cs" />
+    <Compile Include="BL\ProductArr.cs" />
+    <Compile Include="DAL\CategoryAccessories.cs" />
+    <Compile Include="DAL\Category.cs" />
+    <Compile Include="DAL\City_Dal.cs" />
+    <Compile Include="DAL\Client_Dal.cs" />
+    <Compile Include="DAL\CompanyAccessories.cs" />
+    <Compile Include="DAL\Company.cs" />
+    <Compile Include="DAL\Dal.cs" />
+    <Compile Include="DAL\OrderAccessories_Dal.cs" />
+    <Compile Include="DAL\OrderProducts_Dal.cs" />
+    <Compile Include="DAL\Order_Dal.cs" />
+    <Compile Include="DAL\Accessories.cs" />
+    <Compile Include="DAL\Product.cs" />
+    <Compile Include="UI\Form_Accessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Accessories.Designer.cs">
+      <DependentUpon>Form_Accessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Category.Designer.cs">
+      <DependentUpon>Form_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CategoryAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CategoryAccessories.Designer.cs">
+      <DependentUpon>Form_CategoryAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_City.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_City.Designer.cs">
+      <DependentUpon>Form_City.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Client.Designer.cs">
+      <DependentUpon>Form_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Form_Company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Company.Designer.cs">
+      <DependentUpon>Form_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_CompanyAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_CompanyAccessories.Designer.cs">
+      <DependentUpon>Form_CompanyAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Home.Designer.cs">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Order.Designer.cs">
+      <DependentUpon>Form_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Products.Designer.cs">
+      <DependentUpon>Form_Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListViewSorter.cs" />
+    <Compile Include="UI\Form_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_Reports.Designer.cs">
+      <DependentUpon>Form_Reports.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Form_Accessories.resx">
+      <DependentUpon>Form_Accessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Category.resx">
+      <DependentUpon>Form_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CategoryAccessories.resx">
+      <DependentUpon>Form_CategoryAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_City.resx">
+      <DependentUpon>Form_City.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Client.resx">
+      <DependentUpon>Form_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Form_Company.resx">
+      <DependentUpon>Form_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_CompanyAccessories.resx">
+      <DependentUpon>Form_CompanyAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Home.resx">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Order.resx">
+      <DependentUpon>Form_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Products.resx">
+      <DependentUpon>Form_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_Reports.resx">
+      <DependentUpon>Form_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Db_WFA_Shoshani.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Db_WFA_Shoshani_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Db_WFA_Shoshani.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\תמונה6.png" />
+    <None Include="Resources\תמונה5.png" />
+    <None Include="Resources\תמונה41.png" />
+    <None Include="Resources\תמונה4.png" />
+    <None Include="Resources\תמונה3.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\תמונה2.png" />
+    <None Include="Resources\הורדה %283%29.jpg" />
+    <None Include="Resources\תמונה12.jpg" />
+    <None Include="Resources\הורדה %281%29.jpg" />
+    <None Include="Resources\הורדה %282%29.jpg" />
+    <None Include="Resources\הורדה.jpg" />
+    <None Include="Resources\תמונה11.jpg" />
+    <None Include="Resources\תמונה1.jpg" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\BackgroundHome.png" />
+    <None Include="Resources\wallpaper4.jpg" />
+    <None Include="Resources\wallpaper3.jpg" />
+    <None Include="Resources\wallpaper2.jpg" />
+    <None Include="Resources\wallpaper.jpg" />
+    <None Include="Resources\tiedyewallpaper.jpg" />
+    <None Include="Resources\city.jpg" />
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
